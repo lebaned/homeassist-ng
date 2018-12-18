@@ -1,0 +1,56 @@
+language: android
+sudo: required
+jdk: oraclejdk8
+
+os:
+  - linux
+
+env:
+ global:
+ - ANDROID_API=28
+ - EMULATOR_API=28
+ - ANDROID_BUILD_TOOLS=28.0.3
+ - ADB_INSTALL_TIMEOUT=15 # minutes
+
+android:
+  components:
+# Uncomment the lines below if you want to
+# use the latest revision of Android SDK Tools
+    - tools
+    - platform-tools
+    - build-tools-$ANDROID_BUILD_TOOLS
+    - android-$ANDROID_API
+
+# Additional components
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+
+# Specify at least one system image,
+# if you need to run emulator(s) during your tests
+    - sys-img-x86-android-$EMULATOR_API
+
+licenses:
+    - 'android-sdk-preview-license-.+'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
+    - 'android-sdk-license-2742d1c5'
+
+before_install:
+- chmod +x gradlew
+- yes | sdkmanager "platforms;android-28"
+- yes | sdkmanager "emulator" "tools" "platform-tools" > /dev/null
+- yes | sdkmanager "build-tools;28.0.3" "platforms;android-28" > /dev/null
+- yes | sdkmanager "extras;android;m2repository" >/dev/null
+- yes | sdkmanager "system-images;android-25;google_apis;armeabi-v7a" > /dev/null
+# - echo no | avdmanager create avd --force -n test -k "system-images;android-25;google_apis;armeabi-v7a" --tag google_apis --abi armeabi-v7a
+# - emulator -avd test -no-skin -no-audio -no-window &
+# - android-wait-for-emulator
+# - adb shell input keyevent 82 &
+
+before_cache:
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+script: 
+  - "./gradlew build"

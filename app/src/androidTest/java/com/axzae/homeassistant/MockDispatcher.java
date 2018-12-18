@@ -66,6 +66,8 @@ public class MockDispatcher extends Dispatcher {
                             .put("token_type", "Bearer")
                             .toString());
         }
+        // Todo: fix return
+        return new MockResponse();
     }
 
     private Map getQueryPairs(String queryString) {
