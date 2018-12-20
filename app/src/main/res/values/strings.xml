@@ -9,7 +9,7 @@
     <string name="axzae" translatable="false">axzae</string>
     <string name="contributors_translation" translatable="false">Никита Якунин for Russian translation.\nPaul de Wit for Dutch translation.\nSquall Chua for Japanese translation.\nAdrian Scillato for Spanish translation.</string>
 
-    <string name="empty" translatable="false"/>
+    <string name="empty" translatable="false" />
     <string name="empty_dashboard">Your dashboard is empty</string>
 
     <string name="title_changelog">Changelog</string>
@@ -185,5 +185,8 @@
     <string name="button_continue">Continue</string>
     <string name="please_select">Please Select</string>
     <string name="menu_location">Transmit Location</string>
+
+    <string name="auth_finger">Fingerprint Authentication</string>
+    <string name="auth_finger_instructions">Place your fingertip on the Home button to verify your identity</string>
 
 </resources>

@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.IBinder;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.design.internal.BottomNavigationMenuView;
@@ -100,7 +101,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener, EntityProcessInterface, EventEmitterInterface {
+public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener,
+        EntityProcessInterface,
+        EventEmitterInterface{
     private Subject<RxPayload> mEventEmitter = PublishSubject.create();
     private Call<String> mCall2;
     private Spinner mServerSpinner;
@@ -157,6 +160,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
             }
 
 
+            
             Log.d("YouQi", "Service Bound");
             binder.getEventSubject()
                     .subscribeOn(Schedulers.io())
@@ -230,6 +234,14 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Check if fingerprint is enabled
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (prefs.getBoolean("fingerprint_authentication", false)) {
+            Intent i = new Intent(this, FingerprintActivity.class);
+            startActivityForResult(i, 2002);
+        }
+
         setContentView(R.layout.activity_main);
 
         setupContentObserver();
@@ -252,7 +264,6 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         mProgressBar.setVisibility(View.GONE);
 
     }
-
     //https://stackoverflow.com/questions/21380914/contentobserver-onchange
     private void setupContentObserver() {
         // creates and starts a new thread set up as a looper
@@ -679,6 +690,14 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                     //getContentResolver().notifyChange(EntityContentProvider.getUrl(), null);
                 }
                 break;
+            }
+            case 2002:{
+                String result=data.getStringExtra("attribute");
+                if(resultCode == Activity.RESULT_CANCELED || !result.contentEquals("fingerprint_authentication")){
+                    finish();
+                    return;
+                }
+                // Everything went fine
             }
         }
     }

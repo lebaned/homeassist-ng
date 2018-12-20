@@ -26,6 +26,11 @@
             android:summary="@string/pref_websocket_mode_desc"
             android:title="@string/pref_websocket_mode"/>
 
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="fingerprint_authentication"
+            android:title="@string/auth_finger"
+            android:id="@+id/fingerprint_id"/>
         <!--<CheckBoxPreference-->
         <!--android:defaultValue="true"-->
         <!--android:key="push_notification"-->

@@ -14,6 +14,7 @@ import android.util.Log;
 import com.axzae.homeassistant.AboutActivity;
 import com.axzae.homeassistant.BuildConfig;
 import com.axzae.homeassistant.ChangelogActivity;
+import com.axzae.homeassistant.FingerprintActivity;
 import com.axzae.homeassistant.LibraryActivity;
 import com.axzae.homeassistant.R;
 import com.axzae.homeassistant.SettingsActivity;
@@ -23,6 +24,7 @@ import java.util.Locale;
 public class SettingsFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener {
     int countDown = 5;
     SettingsActivity mActivity;
+    public Preference fingerprintPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,16 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         mActivity = (SettingsActivity) getActivity();
         addPreferencesFromResource(R.xml.preferences);
+
+        fingerprintPref = findPreference("fingerprint_authentication");
+        fingerprintPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Intent i = new Intent(mActivity, FingerprintActivity.class);
+                startActivityForResult(i, 1);
+                return false;
+            }
+        });
 
         Preference pref = findPreference("version");
         try {
