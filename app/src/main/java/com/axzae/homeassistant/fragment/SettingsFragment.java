@@ -7,9 +7,12 @@ import android.content.pm.PackageInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.preference.CheckBoxPreference;
+import android.support.v7.preference.EditTextPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.axzae.homeassistant.AboutActivity;
 import com.axzae.homeassistant.BuildConfig;
@@ -43,6 +46,27 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
             public boolean onPreferenceClick(Preference preference) {
                 Intent i = new Intent(mActivity, FingerprintActivity.class);
                 startActivityForResult(i, 1);
+                return false;
+            }
+        });
+
+        fingerprintPref = findPreference("enable_hass_central_server");
+        fingerprintPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+
+                EditTextPreference server_name = (EditTextPreference)findPreference("hass_server_name");
+                EditTextPreference show_key = (EditTextPreference)findPreference("central_server_show_key");
+                CheckBoxPreference casted = (CheckBoxPreference) preference;
+
+                // Toggle server name and show key depending on the output of the enable button.
+                if(casted.isChecked()){
+                    server_name.setEnabled(true);
+                    show_key.setEnabled(true);
+                }else{
+                    server_name.setEnabled(false);
+                    show_key.setEnabled(false);
+                }
                 return false;
             }
         });

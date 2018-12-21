@@ -31,6 +31,22 @@
             android:key="fingerprint_authentication"
             android:title="@string/auth_finger"
             android:id="@+id/fingerprint_id"/>
+        <CheckBoxPreference
+            android:checked="false"
+            android:key="enable_hass_central_server"
+            android:title="@string/enable_hass_central_server"
+            android:id="@+id/enable_hass_central_server"/>
+        <EditTextPreference
+            android:enabled="false"
+            android:title="@string/server_name"
+            android:key="hass_server_name"
+            android:defaultValue="central_hass.exclude.se"
+            />
+        <EditTextPreference
+            android:enabled="false"
+            android:key="central_server_show_key"
+            android:title="@string/central_hass_show_public_key"
+            android:id="@+id/central_hass_show_key"/>
         <!--<CheckBoxPreference-->
         <!--android:defaultValue="true"-->
         <!--android:key="push_notification"-->

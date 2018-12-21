@@ -188,5 +188,8 @@
 
     <string name="auth_finger">Fingerprint Authentication</string>
     <string name="auth_finger_instructions">Place your fingertip on the Home button to verify your identity</string>
+    <string name="enable_hass_central_server">Enable hass central server</string>
+    <string name="server_name">Server name</string>
+    <string name="central_hass_show_public_key">Show public key</string>
 
 </resources>
