@@ -78,11 +78,11 @@ public class AboutFragment extends Fragment {
                 // To count with Play market backstack, After pressing back button,
                 // to taken back to our application, we need to add following flags to intent.
                 int flags = Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_MULTIPLE_TASK;
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                    flags |= Intent.FLAG_ACTIVITY_NEW_DOCUMENT;
-                } else {
-                    flags |= Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET;
-                }
+                //if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                flags |= Intent.FLAG_ACTIVITY_NEW_DOCUMENT;
+                //} else {
+                //    flags |= Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET;
+                //}
                 goToMarket.addFlags(flags);
                 try {
                     startActivity(goToMarket);

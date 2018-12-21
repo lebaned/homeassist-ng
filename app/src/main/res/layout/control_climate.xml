@@ -169,7 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="27 c"
-                android:textSize="24dp"/>
+                android:textSize="24sp"/>
 
         </LinearLayout>
 

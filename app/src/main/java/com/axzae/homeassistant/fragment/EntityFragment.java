@@ -41,6 +41,7 @@ import com.crashlytics.android.answers.Answers;
 import com.crashlytics.android.answers.CustomEvent;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -276,8 +277,8 @@ public class EntityFragment extends BaseFragment implements EntityInterface {
         //Do some magic
         ArrayList<Entity> filteredItems = new ArrayList<>();
         for (Entity item : mAdapter.getItems()) {
-            if (item.getFriendlyDomainName().toUpperCase().contains(query.toUpperCase())
-                    || item.getFriendlyName().toUpperCase().contains(query.toUpperCase())) {
+            if (item.getFriendlyDomainName().toUpperCase(Locale.getDefault()).contains(query.toUpperCase(Locale.getDefault()))
+                    || item.getFriendlyName().toUpperCase(Locale.getDefault()).contains(query.toUpperCase(Locale.getDefault()))) {
                 filteredItems.add(item);
                 Log.d("YouQi", "Added Filter: " + item.entityId);
             }

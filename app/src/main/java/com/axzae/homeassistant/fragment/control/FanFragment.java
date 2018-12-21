@@ -21,6 +21,7 @@ import com.axzae.homeassistant.model.rest.CallServiceRequest;
 import com.axzae.homeassistant.util.CommonUtil;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * Simple fragment with blur effect behind.
@@ -111,7 +112,7 @@ public class FanFragment extends BaseControlFragment implements View.OnClickList
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         Log.d("YouQi", "position: " + mSpeeds.get(position));
-        callService(mEntity.getDomain(), "turn_on", new CallServiceRequest(mEntity.entityId).setSpeed(mSpeeds.get(position).toLowerCase()));
+        callService(mEntity.getDomain(), "turn_on", new CallServiceRequest(mEntity.entityId).setSpeed(mSpeeds.get(position).toLowerCase(Locale.getDefault())));
     }
 
     @Override

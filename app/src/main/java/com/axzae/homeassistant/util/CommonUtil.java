@@ -120,6 +120,8 @@ public class CommonUtil {
     }
 
     public static String getCertificateSHA1Fingerprint(Context mContext) throws Exception {
+        throw new Exception("dont use me");
+        /*
         PackageManager pm = mContext.getPackageManager();
         String packageName = mContext.getPackageName();
         int flags = PackageManager.GET_SIGNATURES;
@@ -137,6 +139,7 @@ public class CommonUtil {
         byte[] publicKey = md.digest(c.getEncoded());
         hexString = byte2HexFormatted(publicKey);
         return hexString;
+        */
     }
 
     public static String byte2HexFormatted(byte[] arr) {
@@ -146,7 +149,7 @@ public class CommonUtil {
             int l = h.length();
             if (l == 1) h = "0" + h;
             if (l > 2) h = h.substring(l - 2, l);
-            str.append(h.toUpperCase());
+            str.append(h.toUpperCase(Locale.getDefault()));
             if (i < (arr.length - 1)) str.append(':');
         }
         return str.toString();
@@ -297,7 +300,7 @@ public class CommonUtil {
                 if (ACTIONABLE_DELIMITERS.indexOf((int) c) < 0) {
                     sb = new StringBuilder();
                     sb.append(name.substring(0, 2));
-                    sb.append(name.substring(2, 3).toUpperCase());
+                    sb.append(name.substring(2, 3).toUpperCase(Locale.getDefault()));
                     sb.append(name.substring(3));
                     name = sb.toString();
                 }
@@ -306,7 +309,7 @@ public class CommonUtil {
                 if (ACTIONABLE_DELIMITERS.indexOf((int) c) < 0) {
                     sb = new StringBuilder();
                     sb.append(name.substring(0, 3));
-                    sb.append(name.substring(3, 4).toUpperCase());
+                    sb.append(name.substring(3, 4).toUpperCase(Locale.getDefault()));
                     sb.append(name.substring(4));
                     name = sb.toString();
                 }

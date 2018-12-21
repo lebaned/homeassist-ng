@@ -250,7 +250,7 @@ public class Entity {
             return "Notification";
         }
 
-        return domain.substring(0, 1).toUpperCase() + domain.substring(1);
+        return domain.substring(0, 1).toUpperCase(Locale.getDefault()) + domain.substring(1);
     }
 
     public boolean hasStateIcon() {
@@ -295,11 +295,11 @@ public class Entity {
         } else if (isGroup()) {
             return MDIFont.getIcon("mdi:google-circles-communities");
         } else if (isLight()) {
-            return MDIFont.getIcon(state.toUpperCase().equals("ON") ? "mdi:lightbulb" : "mdi:lightbulb-outline");
+            return MDIFont.getIcon(state.toUpperCase(Locale.getDefault()).equals("ON") ? "mdi:lightbulb" : "mdi:lightbulb-outline");
         } else if (isSun()) {
-            return MDIFont.getIcon(state.toUpperCase().equals("ABOVE_HORIZON") ? "mdi:white-balance-sunny" : "mdi:brightness-3");
+            return MDIFont.getIcon(state.toUpperCase(Locale.getDefault()).equals("ABOVE_HORIZON") ? "mdi:white-balance-sunny" : "mdi:brightness-3");
         } else if (isSwitch()) {
-            return MDIFont.getIcon(state.toUpperCase().equals("ON") ? "mdi:toggle-switch" : "mdi:toggle-switch-off");
+            return MDIFont.getIcon(state.toUpperCase(Locale.getDefault()).equals("ON") ? "mdi:toggle-switch" : "mdi:toggle-switch-off");
         } else if (isScript()) {
             return MDIFont.getIcon("mdi:code-braces");
         } else if (isCamera()) {
@@ -343,11 +343,11 @@ public class Entity {
         } else if (isGroup()) {
             return MDIFont.getIcon("mdi:google-circles-communities");
         } else if (isLight()) {
-            return MDIFont.getIcon(state.toUpperCase().equals("ON") ? "mdi:lightbulb" : "mdi:lightbulb-outline");
+            return MDIFont.getIcon(state.toUpperCase(Locale.getDefault()).equals("ON") ? "mdi:lightbulb" : "mdi:lightbulb-outline");
         } else if (isSun()) {
-            return MDIFont.getIcon(state.toUpperCase().equals("ABOVE_HORIZON") ? "mdi:white-balance-sunny" : "mdi:brightness-3");
+            return MDIFont.getIcon(state.toUpperCase(Locale.getDefault()).equals("ABOVE_HORIZON") ? "mdi:white-balance-sunny" : "mdi:brightness-3");
         } else if (isSwitch()) {
-            return MDIFont.getIcon(state.toUpperCase().equals("ON") ? "mdi:toggle-switch" : "mdi:toggle-switch-off");
+            return MDIFont.getIcon(state.toUpperCase(Locale.getDefault()).equals("ON") ? "mdi:toggle-switch" : "mdi:toggle-switch-off");
         } else if (isScript()) {
             return MDIFont.getIcon("mdi:code-braces");
         } else if (isCamera()) {
@@ -450,14 +450,14 @@ public class Entity {
                     break;
             }
         } else if (isSwitch() || isLight() || isAutomation() || isBinarySensor() || isScript() || isInputBoolean() || isMediaPlayer() || isGroup()) {
-            friendlyState = friendlyState.toUpperCase();
+            friendlyState = friendlyState.toUpperCase(Locale.getDefault());
         }
 
         return friendlyState;
     }
 
     public boolean isCurrentStateActive() {
-        return "ON".equals(state.toUpperCase());
+        return "ON".equals(state.toUpperCase(Locale.getDefault()));
     }
 
     public String getFriendlyStateRow() {
@@ -473,13 +473,13 @@ public class Entity {
 
     public boolean isActivated() {
         if (isMediaPlayer()) {
-            return !state.toUpperCase().equals("OFF");
+            return !state.toUpperCase(Locale.getDefault()).equals("OFF");
         } else if (isSun()) {
             return false; //state.toUpperCase().equals("ABOVE_HORIZON");
         } else if (isDeviceTracker()) {
-            return state.toUpperCase().equals("HOME");
+            return state.toUpperCase(Locale.getDefault()).equals("HOME");
         }
-        return state.toUpperCase().equals("ON");
+        return state.toUpperCase(Locale.getDefault()).equals("ON");
     }
 
     public ContentValues getContentValues(boolean withId) {

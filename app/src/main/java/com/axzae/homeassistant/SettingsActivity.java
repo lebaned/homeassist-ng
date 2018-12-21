@@ -79,7 +79,7 @@ public class SettingsActivity extends AppCompatActivity
         // Otherwise we flip it back to its previous state and redraws the screen.
         Boolean newValue = !prefs.getBoolean(result,false);
         edit.putBoolean(result, newValue);
-        edit.commit();
+        edit.apply();
         recreate();
 
     }

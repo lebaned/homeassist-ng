@@ -56,23 +56,23 @@ public class EntityActivity extends BaseActivity {
         mTextState.setText(mEntity.getFriendlyState());
         mTextGroup.setText(mEntity.getGroupName());
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             // Postpone the transition until the window's decor view has
             // finished its layout.
-            postponeEnterTransition();
+        postponeEnterTransition();
 
-            final View decor = getWindow().getDecorView();
-            decor.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-                @Override
-                public boolean onPreDraw() {
-                    decor.getViewTreeObserver().removeOnPreDrawListener(this);
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        startPostponedEnterTransition();
-                    }
-                    return true;
-                }
-            });
-        }
+        final View decor = getWindow().getDecorView();
+        decor.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+            @Override
+            public boolean onPreDraw() {
+                decor.getViewTreeObserver().removeOnPreDrawListener(this);
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                startPostponedEnterTransition();
+//                }
+                return true;
+            }
+        });
+        //}
     }
 
     @Override
