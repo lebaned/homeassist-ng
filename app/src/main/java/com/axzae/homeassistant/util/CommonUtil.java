@@ -120,8 +120,6 @@ public class CommonUtil {
     }
 
     public static String getCertificateSHA1Fingerprint(Context mContext) throws Exception {
-        throw new Exception("dont use me");
-        /*
         PackageManager pm = mContext.getPackageManager();
         String packageName = mContext.getPackageName();
         int flags = PackageManager.GET_SIGNATURES;
@@ -139,7 +137,6 @@ public class CommonUtil {
         byte[] publicKey = md.digest(c.getEncoded());
         hexString = byte2HexFormatted(publicKey);
         return hexString;
-        */
     }
 
     public static String byte2HexFormatted(byte[] arr) {
