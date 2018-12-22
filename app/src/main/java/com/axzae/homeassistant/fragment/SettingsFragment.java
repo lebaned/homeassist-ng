@@ -104,7 +104,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT,
-                        "Hey, check out HomeAssist android app at: https://goo.gl/5rkPnP #homeassistant #android");
+                        "Hey, check out HomeAssist android app at: https://play.google.com/store/apps/details?id=com.payano.homeassistant #homeassistant #android");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
                 return false;
@@ -130,7 +130,7 @@ public class SettingsFragment extends PreferenceFragmentCompat implements Shared
 
                     Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
                     emailIntent.setData(Uri.parse("mailto:"));
-                    emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"support@axzae.com"});
+                    emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"support@exclude.se"});
                     emailIntent.putExtra(Intent.EXTRA_SUBJECT, "HomeAssist Bug Report");
                     emailIntent.putExtra(Intent.EXTRA_TEXT, "\n\nAndroid Version: " + Build.VERSION.RELEASE + "\nHomeAssist Version: " + BuildConfig.VERSION_NAME);
                     startActivity(Intent.createChooser(emailIntent, getString(R.string.title_send_email)));

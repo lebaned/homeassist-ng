@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "855516953680",
+    "project_number": "632678231261",
     "firebase_url": "https://homeassistant-axzae.firebaseio.com",
-    "project_id": "homeassistant-axzae",
-    "storage_bucket": "homeassistant-axzae.appspot.com"
+    "project_id": "homeassistant-payano",
+    "storage_bucket": "homeassistant-payano.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:855516953680:android:a424d94f17a155d0",
+        "mobilesdk_app_id": "1:632678231261:android:a424d94f17a155d0",
         "android_client_info": {
           "package_name": "com.payano.homeassistant"
         }
       },
       "oauth_client": [
         {
-          "client_id": "855516953680-tfa3c5d2ucutigken5fk9feqkjedqoqg.apps.googleusercontent.com",
+          "client_id": "632678231261-tfa3c5d2ucutigken5fk9feqkjedqoqg.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.payano.homeassistant",
@@ -23,7 +23,7 @@
           }
         },
         {
-          "client_id": "855516953680-o7se0dv4atngvqf97ij7u4562j5u0b5t.apps.googleusercontent.com",
+          "client_id": "632678231261-o7se0dv4atngvqf97ij7u4562j5u0b5t.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.payano.homeassistant",
@@ -31,7 +31,7 @@
           }
         },
         {
-          "client_id": "855516953680-d6tdir9h42u2tj6usl8ppaf7hnnqm8ek.apps.googleusercontent.com",
+          "client_id": "632678231261-d6tdir9h42u2tj6usl8ppaf7hnnqm8ek.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -48,7 +48,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "855516953680-d6tdir9h42u2tj6usl8ppaf7hnnqm8ek.apps.googleusercontent.com",
+              "client_id": "632678231261-d6tdir9h42u2tj6usl8ppaf7hnnqm8ek.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
