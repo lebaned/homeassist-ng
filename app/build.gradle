@@ -33,7 +33,6 @@ task printVersion() << {
 
 apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
-//apply plugin: 'com.google.firebase.firebase-perf'
 
 repositories {
     maven { url 'https://maven.fabric.io/public' }
@@ -62,7 +61,7 @@ android {
         applicationId "com.payano.homeassistant"
         minSdkVersion 23
         targetSdkVersion 27
-        versionCode 4
+        versionCode 5
         versionName "0.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -129,17 +128,6 @@ dependencies {
     // need to investigate why this library cannot be upgraded
     implementation 'com.google.android.gms:play-services-maps:11.6.0'
 
-    // need to investigate why this library cannot be upgraded
-
-    //implementation "com.google.firebase:firebase-core:11.6.0"
-    implementation 'com.google.firebase:firebase-config:11.6.0'
-
-    // need to investigate why this library cannot be upgraded
-    implementation 'com.google.firebase:firebase-messaging:11.6.0'
-
-    // need to investigate why this library cannot be upgraded
-
-    //implementation "com.google.firebase:firebase-perf:11.4.2"
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
