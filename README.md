@@ -4,9 +4,11 @@ HomeAsisst-ng (next generation) is a fork of [HomeAssist][1]. It is a clean & co
 
 Download
 --------
-The android app is not available yet.
+The android app is available on Apple Play:
 
-If anyone requests, I can put up a development build.
+<a href="https://play.google.com/store/apps/details?id=com.payano.homeassistant">
+  <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
+</a>
 
 Developement
 ------------
