@@ -30,7 +30,6 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.axzae.homeassistant.R;
-import com.google.android.gms.ads.AdRequest;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -240,12 +239,6 @@ public class CommonUtil {
                 }
             });
         }
-    }
-
-    public static AdRequest getAdRequest() {
-        return new AdRequest.Builder()
-                .addTestDevice("CE1828AEF0F43C2D5DF5834F3F309B02")
-                .build();
     }
 
     public static void setMenuDrawableColor(Context context, MenuItem menuItem, int resColor) {

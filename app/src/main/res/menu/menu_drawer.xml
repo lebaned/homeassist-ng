@@ -19,12 +19,6 @@
             android:title="@string/menu_logbook"/>
 
         <item
-            android:id="@+id/nav_ads"
-            android:icon="@drawable/ic_television_classic_black_24dp"
-            android:title="@string/menu_ads"
-            android:visible="false"/>
-
-        <item
             android:id="@+id/nav_history"
             android:enabled="false"
             android:icon="@drawable/ic_history_black_24dp"

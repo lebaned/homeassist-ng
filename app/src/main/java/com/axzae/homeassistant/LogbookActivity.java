@@ -34,8 +34,6 @@ import com.axzae.homeassistant.provider.ServiceProvider;
 import com.axzae.homeassistant.shared.LogSheetDiffUtilCallback;
 import com.axzae.homeassistant.util.CommonUtil;
 import com.axzae.homeassistant.util.FaultUtil;
-import com.google.firebase.analytics.FirebaseAnalytics;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -74,7 +72,6 @@ public class LogbookActivity extends AppCompatActivity {
 
         Bundle params = new Bundle();
         params.putString("name", this.getClass().getName());
-        FirebaseAnalytics.getInstance(this).logEvent("open_activity", params);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {

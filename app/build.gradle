@@ -62,7 +62,7 @@ android {
         applicationId "com.payano.homeassistant"
         minSdkVersion 23
         targetSdkVersion 27
-        versionCode 3
+        versionCode 4
         versionName "0.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -133,9 +133,6 @@ dependencies {
 
     //implementation "com.google.firebase:firebase-core:11.6.0"
     implementation 'com.google.firebase:firebase-config:11.6.0'
-
-    // need to investigate why this library cannot be upgraded
-    implementation 'com.google.firebase:firebase-ads:11.6.0'
 
     // need to investigate why this library cannot be upgraded
     implementation 'com.google.firebase:firebase-messaging:11.6.0'

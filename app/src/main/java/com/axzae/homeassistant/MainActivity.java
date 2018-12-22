@@ -80,9 +80,6 @@ import com.axzae.homeassistant.util.FaultUtil;
 import com.axzae.homeassistant.view.ChangelogView;
 import com.axzae.homeassistant.view.MultiSwipeRefreshLayout;
 import com.crashlytics.android.Crashlytics;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
 import com.jaeger.library.StatusBarUtil;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
@@ -416,9 +413,6 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
                     case R.id.nav_webui:
                         showWebUI();
                         break;
-                    case R.id.nav_ads:
-                        watchAds();
-                        break;
                     case R.id.nav_logbook:
                         showLogbook();
                         break;
@@ -486,12 +480,6 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.message_recommendation, "https://goo.gl/5rkPnP  #homeassistant #android"));
         sendIntent.setType("text/plain");
         startActivity(sendIntent);
-    }
-
-    private void watchAds() {
-        MobileAds.initialize(getApplicationContext(), getString(R.string.banner_ad_app_id));
-        AdView mAdView = findViewById(R.id.adView);
-        mAdView.loadAd(CommonUtil.getAdRequest());
     }
 
     private void setupViewPager() {
