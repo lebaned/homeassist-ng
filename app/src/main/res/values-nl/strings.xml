@@ -30,12 +30,12 @@
     <string name="action_yes">Ja</string>
     <string name="action_no">Nee</string>
     <string name="action_remove">Verwijder</string>
-    <string name="action_report">Verslag</string>
+    <string name="action_report">Rapport</string>
     <string name="action_retry">Opnieuw</string>
     <string name="action_set">Instellen</string>
     <string name="action_send">Versturen</string>
     <string name="action_dont_send_report">Niet sturen</string>
-    <string name="action_send_report">Verzend verslag</string>
+    <string name="action_send_report">Verzend rapport</string>
     <string name="action_disconnect">Ontkoppel</string>
 
     <string name="message_attach_bootstrap">Wil je het bootstrap.json bestand toevoegen?</string>
@@ -158,6 +158,23 @@
 
     <string name="navigation_drawer_open">Open navigatie</string>
     <string name="navigation_drawer_close">Sluit navigatie</string>
+    <string name="label_time">Tijd</string>
+    <string name="label_date">Datum</string>
+    <string name="please_select">Selecteer alstublieft</string>
+    <string name="auth_finger">Vingerafdrukverificatie</string>
+    <string name="menu_location">Locatie verzenden</string>
+    <string name="auth_finger_instructions">Plaats uw vingertop op de vingerafdrukscanner om uw identiteit te verifiëren</string>
+    <string name="content_nozone">Het lijkt erop dat u geen zones of apparaat-trackers hebt geconfigureerd in uw home assistant.</string>
+    <string name="title_nozone">Geen locatie gedetecteerd</string>
+    <string name="menu_map">Kaart</string>
+    <string name="menu_remove_dashboard">Verwijder dashboard</string>
+    <string name="prompt_connection_name">Verbindingsnaam</string>
+    <string name="title_add_connection">Voeg verbinding toe</string>
+    <string name="button_continue">Doorgaan</string>
+    <string name="exception_no_chrome">Vereist Chrome-browser</string>
+    <string name="error_invalid_baseurl">Ongeldig Basis URL</string>
+    <string name="label_target_temperature">Doeltemperatuur</string>
+    <string name="label_current_temperature">Huidige temperatuur:</string>
 
 
 </resources>

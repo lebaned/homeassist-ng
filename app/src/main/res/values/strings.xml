@@ -187,6 +187,6 @@
     <string name="menu_location">Transmit Location</string>
 
     <string name="auth_finger">Fingerprint Authentication</string>
-    <string name="auth_finger_instructions">Place your fingertip on the Home button to verify your identity</string>
+    <string name="auth_finger_instructions">Place your fingertip on the fingerprint scanner to verify your identity</string>
 
 </resources>
