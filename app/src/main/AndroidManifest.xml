@@ -24,7 +24,7 @@
         android:theme="@style/Theme.Axzae">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="d174d6772b2d398c3349c872c4dcb335ccec42ee" />
 
         <activity
             android:name=".ConnectActivity"
@@ -78,8 +78,8 @@
 
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="7f69c0c5457d23a9e7e80d4e75fa42ecbbd16837" />
-
+            android:value="d174d6772b2d398c3349c872c4dcb335ccec42ee"
+            />
         <provider
             android:name=".provider.EntityContentProvider"
             android:authorities="com.axzae.homeassistant.provider.EntityContentProvider"

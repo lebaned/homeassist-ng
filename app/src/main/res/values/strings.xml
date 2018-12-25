@@ -4,7 +4,7 @@
     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-9691552319094645/9436422113</string>
     <string name="banner_ad_unit_id_interstitial" translatable="false">ca-app-pub-9691552319094645/2066864259</string>
 
-    <string name="app_name">HomeAssist</string>
+    <string name="app_name">HomeAssist-ng</string>
     <string name="about_extra">HomeAssist is an independent application which is not related to any affiliate. All products, logos and images mentionned in this application are the property of their respective brand.</string>
     <string name="axzae" translatable="false">axzae</string>
     <string name="contributors_translation" translatable="false">Никита Якунин for Russian translation.\nPaul de Wit for Dutch translation.\nSquall Chua for Japanese translation.\nAdrian Scillato for Spanish translation.</string>
