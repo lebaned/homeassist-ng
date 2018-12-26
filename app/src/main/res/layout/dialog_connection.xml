@@ -23,7 +23,7 @@
             android:paddingBottom="8dp"
             android:paddingTop="24dp">
 
-            <com.axzae.homeassistant.view.MaterialEditText
+            <com.payano.homeassistant.view.MaterialEditText
                 android:id="@+id/text_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -40,9 +40,9 @@
                 tools:ignore="RtlHardcoded">
 
                 <requestFocus/>
-            </com.axzae.homeassistant.view.MaterialEditText>
+            </com.payano.homeassistant.view.MaterialEditText>
 
-            <com.axzae.homeassistant.view.MaterialEditText
+            <com.payano.homeassistant.view.MaterialEditText
                 android:id="@+id/text_ipaddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,9 +58,9 @@
                 app:met_floatingLabelText="@string/prompt_ipaddress"
                 tools:ignore="RtlHardcoded">
 
-            </com.axzae.homeassistant.view.MaterialEditText>
+            </com.payano.homeassistant.view.MaterialEditText>
 
-            <com.axzae.homeassistant.view.MaterialEditText
+            <com.payano.homeassistant.view.MaterialEditText
                 android:id="@+id/text_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                 app:met_floatingLabelText="@string/prompt_password"
                 tools:ignore="RtlHardcoded">
 
-            </com.axzae.homeassistant.view.MaterialEditText>
+            </com.payano.homeassistant.view.MaterialEditText>
 
         </LinearLayout>
     </ScrollView>

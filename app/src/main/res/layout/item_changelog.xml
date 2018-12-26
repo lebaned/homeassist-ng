@@ -58,7 +58,7 @@
 
             </LinearLayout>
 
-            <com.axzae.homeassistant.view.ChangelogView
+            <com.payano.homeassistant.view.ChangelogView
                 android:id="@+id/view_changelog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

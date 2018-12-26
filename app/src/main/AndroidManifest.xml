@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.axzae.homeassistant">
+    package="com.payano.homeassistant">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <application
-        android:name=".AppController"
+        android:name="com.payano.homeassistant.AppController"
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
@@ -27,7 +27,7 @@
             android:value="d174d6772b2d398c3349c872c4dcb335ccec42ee" />
 
         <activity
-            android:name=".ConnectActivity"
+            android:name="com.payano.homeassistant.ConnectActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -40,37 +40,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.payano.homeassistant.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleInstance"
             android:theme="@style/Theme.Axzae.Main" />
         <activity
-            android:name=".EntityActivity"
+            android:name="com.payano.homeassistant.EntityActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".EditActivity"
+            android:name="com.payano.homeassistant.EditActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Axzae.EditTheme" />
         <activity
-            android:name=".SettingsActivity"
+            android:name="com.payano.homeassistant.SettingsActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".AboutActivity"
+            android:name="com.payano.homeassistant.AboutActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".LibraryActivity"
+            android:name="com.payano.homeassistant.LibraryActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".ChangelogActivity"
+            android:name="com.payano.homeassistant.ChangelogActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".WikiActivity"
+            android:name="com.payano.homeassistant.WikiActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".LogbookActivity"
+            android:name="com.payano.homeassistant.LogbookActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".TransparentActivity"
+            android:name="com.payano.homeassistant.TransparentActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:launchMode="singleInstance"
@@ -81,15 +81,15 @@
             android:value="d174d6772b2d398c3349c872c4dcb335ccec42ee"
             />
         <provider
-            android:name=".provider.EntityContentProvider"
-            android:authorities="com.axzae.homeassistant.provider.EntityContentProvider"
+            android:name="com.payano.homeassistant.provider.EntityContentProvider"
+            android:authorities="com.payano.homeassistant.provider.EntityContentProvider"
             android:exported="false" />
         <provider
-            android:name=".provider.DummyContentProvider"
-            android:authorities="com.axzae.homeassistant.provider.DummyContentProvider"
+            android:name="com.payano.homeassistant.provider.DummyContentProvider"
+            android:authorities="com.payano.homeassistant.provider.DummyContentProvider"
             android:exported="false" />
 
-        <receiver android:name=".provider.EntityWidgetProvider">
+        <receiver android:name="com.payano.homeassistant.provider.EntityWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -99,20 +99,20 @@
                 android:resource="@xml/entity_widget_info" />
         </receiver>
         <receiver
-            android:name=".service.DataSyncService$TerminateConnectionReceiver"
+            android:name="com.payano.homeassistant.service.DataSyncService$TerminateConnectionReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="TERMINATE_CONNECTION" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".WidgetConfigActivity">
+        <activity android:name="com.payano.homeassistant.WidgetConfigActivity">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
-        <activity android:name=".GroupActivity" />
-        <activity android:name=".MapActivity" />
+        <activity android:name="com.payano.homeassistant.GroupActivity" />
+        <activity android:name="com.payano.homeassistant.MapActivity" />
 
         <!-- <service -->
         <!-- android:name=".service.HaFirebaseMessagingService"> -->
@@ -129,9 +129,9 @@
         <!-- </intent-filter> -->
         <!-- </service> -->
 
-        <service android:name=".service.DataSyncService" />
+        <service android:name="com.payano.homeassistant.service.DataSyncService" />
 
-        <activity android:name=".FingerprintActivity"></activity>
+        <activity android:name="com.payano.homeassistant.FingerprintActivity"></activity>
     </application>
 
 </manifest>

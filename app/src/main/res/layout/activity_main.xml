@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="false"
-        tools:context="com.axzae.homeassistant.MainActivity">
+        tools:context="com.payano.homeassistant.MainActivity">
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appbar"
@@ -60,7 +60,7 @@
         </android.support.design.widget.AppBarLayout>
 
 
-        <com.axzae.homeassistant.view.MultiSwipeRefreshLayout
+        <com.payano.homeassistant.view.MultiSwipeRefreshLayout
             android:id="@+id/swipe_refresh_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -90,7 +90,7 @@
                     app:mpb_useIntrinsicPadding="false"/>
 
             </FrameLayout>
-        </com.axzae.homeassistant.view.MultiSwipeRefreshLayout>
+        </com.payano.homeassistant.view.MultiSwipeRefreshLayout>
 
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigation"
@@ -100,7 +100,7 @@
             android:background="@color/md_white_1000"
             app:itemIconTint="@color/color_bottom_navigation"
             app:itemTextColor="@color/md_red_500"
-            app:layout_behavior="com.axzae.homeassistant.view.BottomNavigationViewBehavior"
+            app:layout_behavior="com.payano.homeassistant.view.BottomNavigationViewBehavior"
             app:menu="@menu/navigation"/>
 
     </android.support.design.widget.CoordinatorLayout>

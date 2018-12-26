@@ -9,7 +9,7 @@
     android:clipToPadding="false"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <com.axzae.homeassistant.view.RecyclerViewEmptySupport
+    <com.payano.homeassistant.view.RecyclerViewEmptySupport
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

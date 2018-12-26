@@ -9,7 +9,7 @@
     android:background="@color/md_white_1000"
     android:orientation="vertical">
 
-    <com.axzae.homeassistant.view.FixedAspectRatioFrameLayout
+    <com.payano.homeassistant.view.FixedAspectRatioFrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="16dp"
@@ -169,7 +169,7 @@
 
         </LinearLayout>
 
-    </com.axzae.homeassistant.view.FixedAspectRatioFrameLayout>
+    </com.payano.homeassistant.view.FixedAspectRatioFrameLayout>
 
     <LinearLayout
         android:id="@+id/layout_volume"

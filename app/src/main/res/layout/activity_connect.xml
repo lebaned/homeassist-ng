@@ -51,7 +51,7 @@
         android:layout_gravity="center"
         android:orientation="vertical">
 
-        <com.axzae.homeassistant.view.MaterialEditText
+        <com.payano.homeassistant.view.MaterialEditText
             android:id="@+id/text_ipaddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,9 +71,9 @@
             tools:ignore="RtlHardcoded">
 
             <requestFocus/>
-        </com.axzae.homeassistant.view.MaterialEditText>
+        </com.payano.homeassistant.view.MaterialEditText>
 
-        <com.axzae.homeassistant.view.MaterialEditText
+        <com.payano.homeassistant.view.MaterialEditText
             android:id="@+id/text_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
             tools:ignore="RtlHardcoded">
 
             <requestFocus/>
-        </com.axzae.homeassistant.view.MaterialEditText>
+        </com.payano.homeassistant.view.MaterialEditText>
 
         <Button
             android:id="@+id/button_connect"

@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.axzae.homeassistant.view.FixedAspectRatioFrameLayout
+    <com.payano.homeassistant.view.FixedAspectRatioFrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:animateLayoutChanges="true"
@@ -101,7 +101,7 @@
             android:visibility="gone"
             app:mpb_progressStyle="circular"/>
 
-    </com.axzae.homeassistant.view.FixedAspectRatioFrameLayout>
+    </com.payano.homeassistant.view.FixedAspectRatioFrameLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"

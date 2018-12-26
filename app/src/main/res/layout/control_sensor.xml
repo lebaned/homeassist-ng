@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.axzae.homeassistant.view.FixedAspectRatioFrameLayout
+<com.payano.homeassistant.view.FixedAspectRatioFrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -96,5 +96,5 @@
         android:visibility="gone"
         app:mpb_progressStyle="circular"/>
 
-</com.axzae.homeassistant.view.FixedAspectRatioFrameLayout>
+</com.payano.homeassistant.view.FixedAspectRatioFrameLayout>
 
